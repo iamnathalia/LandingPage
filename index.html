@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <!-- importação dos servidores bootstrap (site) - estilo CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+<!-- nav é a tag de navegação/menu -->
+<!-- botão ativado para responsitivade, IMPORTANTE // navbar-toggler: tela "estreitada" -->
+
+<!-- MENUS -->
+    <nav class="navbar navbar-expand-lg navbar-dark text-white bg-dark"> <!-- navbar-expand-lg (large/tamanho), navbar-light é o estilo da barra e bg-light é o background -->
+        <a class="navbar-brand" href="http://127.0.0.1:5500/index.html">  <img src="https://cdn.discordapp.com/attachments/952556720419401791/970523124045062204/cute.png" 
+            width="30" height="30" class="d-inline-block align-top" alt="garota representada em desenho"> Animax 
+        </a> <!-- conf do icon da barra menu // href incluir endereço da home depois-->
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" 
+        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+        </button> 
+
+        <!-- data target:"conteudoNavbarSuportado" refere-se ao conteudo suportado no botão responsivo, 
+        confere todos os elementos da div principal || ul: lista || form: linkado com a barra pesquisar -->
+        
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+        <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" 
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Menu Principal </a>
+            
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Ação</a>
+                <a class="dropdown-item" href="#">Outra ação</a>
+                <div class="dropdown-divider"></div> <!-- divisor do menu!-->
+                <a class="dropdown-item" href="#">Algo mais aqui</a>
+            </div>
+            </li>
+
+<!-- OUTRO MENU COM NAVEGAÇÃO -->
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" 
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Redes Sociais </a>
+                
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="https://twitter.com/"> Twitter </a>
+                    <a class="dropdown-item" href="https://instagram.com/"> Instagram </a>
+                    <div class="dropdown-divider"></div> <!-- divisor do menu!-->
+                    <a class="dropdown-item" href="https://twitch.tv/"> Twitch </a>
+                </div>
+                </li>
+           
+        </ul>
+
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+            <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Pesquisar</button>
+        </form>
+        </div>
+    </nav> 
+<!-- /MENUS -->
+<!-- ao escrever ".nomedeumaclasse" + enter -> o VSC já cria a classe necessária por bootstrap || -->
+
+<!-- GRID -->
+
+
+<div class="container"> <!-- container gera espaçamento para centralizar conteudo na tela -->
+    
+    <div class="row mt-4 d-flex justify-content-center"> <!-- row=fileira || d-flex: display flex (flex-box) || justify content center: prop. do flexbox para centralizar conforme tela -->
+        <div class="col-md-12"> <!-- col (coluna) md middle=meio, lg= large, sm small=pequeno || 12 = qnde de colunas -->
+            <div class="bg-secondary"> 12 colunas </div> <!-- para editar cada uma, deve separar, reperindo o cod só que troque o 12 por 1 ou a qnde necessária -->
+        </div>
+    </div>
+</div>
+<!-- por padrão as colunas possuem padding de 15px (espaçamento), para retirar, adicione p-0 dentro de class 'col-md' -->
+
+
+
+
+<!-- /GRID -->
+
+
+<!-- scripts BOOTSTRAP : Necessário para utilização de cod. JS -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+    crossorigin="anonymous"></script>
+
+</body>
+</html>
